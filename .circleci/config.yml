@@ -37,6 +37,8 @@ jobs:
           POSTGRES_DB: circle_test
           POSTGRES_PASSWORD: ""
 
+    working_directory: ~/circle-ci-playground
+    steps:
       - run: 
           name: Python Test
           command: |
@@ -45,6 +47,8 @@ jobs:
     docker:
       - image: circleci/python:3.6.4
       
+    working_directory: ~/circle-ci-playground
+    steps:
       - run: 
           name: Deploy
           command: |
